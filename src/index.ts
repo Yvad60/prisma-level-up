@@ -4,6 +4,7 @@ async function main() {
   const prisma = new PrismaClient();
   try {
     const posts = await prisma.post.findMany();
+    console.log(posts);
   } finally {
     prisma.$disconnect();
   }
@@ -11,5 +12,5 @@ async function main() {
 
 main();
 
-// running this will cause an error 
-// to be solved on the next commit 
+// running this will cause an error
+// to be solved on the next commit
